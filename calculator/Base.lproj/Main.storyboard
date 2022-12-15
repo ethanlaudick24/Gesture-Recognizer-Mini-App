@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,109 +14,159 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WnJ-Gm-NYG">
-                                <rect key="frame" x="107" y="448" width="200" height="31"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="figure.stand" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UQe-Ab-SKr">
+                                <rect key="frame" x="352" y="460" width="46" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <color key="tintColor" systemColor="systemCyanColor"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Click" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4B-wz-nX7">
+                                <rect key="frame" x="119" y="71" width="192" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drag" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0As-J4-nkp">
+                                <rect key="frame" x="119" y="806" width="192" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="38"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Q78-I1-Ntk">
+                                <rect key="frame" x="69" y="292.33333333333337" width="130" height="129"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Perimeter of Rectangle"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <action selector="permOfRectAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JPB-ME-iTe"/>
+                                    <outletCollection property="gestureRecognizers" destination="0EF-z1-sSi" appends="YES" id="jUn-i0-Ayy"/>
                                 </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number 1 or Length" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hrw-Ot-vV3">
-                                <rect key="frame" x="126" y="151" width="156" height="34"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZRB-u6-Hyb">
+                                <rect key="frame" x="232" y="291.33333333333337" width="130" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number 2 or Width" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AGd-fr-q2S">
-                                <rect key="frame" x="126" y="211" width="156" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Output" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mPj-N5-8zj">
-                                <rect key="frame" x="126" y="275" width="156" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3LF-5f-mFE">
-                                <rect key="frame" x="150" y="337" width="33" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <action selector="addAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jbd-d4-X29"/>
+                                    <outletCollection property="gestureRecognizers" destination="qnJ-A0-64y" appends="YES" id="Ru0-bK-OnH"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taz-qu-YAk">
-                                <rect key="frame" x="223" y="337" width="31.333333333333332" height="31"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="triangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iyX-q1-prs">
+                                <rect key="frame" x="150" y="136.33333333333337" width="130" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="-"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <action selector="subtractAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hyl-U4-sPr"/>
+                                    <outletCollection property="gestureRecognizers" destination="dem-mf-LAs" appends="YES" id="ihy-SR-cYK"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doa-46-mXX">
-                                <rect key="frame" x="151" y="395" width="31.333333333333332" height="31"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RBz-DF-UWt">
+                                <rect key="frame" x="69" y="636.33333333333337" width="130" height="129"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="x"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <action selector="multiplyAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4LH-l8-DaN"/>
+                                    <outletCollection property="gestureRecognizers" destination="ymb-P5-igA" appends="YES" id="wUE-af-4EF"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiK-Gh-EUQ">
-                                <rect key="frame" x="226" y="395" width="28.333333333333332" height="31"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="x3O-pM-tRb">
+                                <rect key="frame" x="232" y="635.33333333333337" width="130" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="/"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <action selector="divideAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JbP-i4-rZe"/>
+                                    <outletCollection property="gestureRecognizers" destination="4i9-z0-tL0" appends="YES" id="CpQ-kD-e15"/>
                                 </connections>
-                            </button>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="triangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oln-55-Mmv">
+                                <rect key="frame" x="150" y="474.33333333333337" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="30U-rV-qpx" appends="YES" id="W3B-xm-gOj"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Z2L-ZK-jy9" appends="YES" id="LWo-bP-VWb"/>
+                        </connections>
                     </view>
                     <connections>
-                        <outlet property="numberOne" destination="Hrw-Ot-vV3" id="iJb-Dz-YKc"/>
-                        <outlet property="numberTwo" destination="AGd-fr-q2S" id="QMj-aZ-Xoc"/>
-                        <outlet property="outputText" destination="mPj-N5-8zj" id="cr4-Pd-3eB"/>
+                        <outlet property="clickCircle" destination="Q78-I1-Ntk" id="YVc-St-U6r"/>
+                        <outlet property="clickSquare" destination="ZRB-u6-Hyb" id="FT6-Mp-OVd"/>
+                        <outlet property="clickTriangle" destination="iyX-q1-prs" id="oWH-dE-NkQ"/>
+                        <outlet property="dragCircle" destination="RBz-DF-UWt" id="P0a-Rv-ddN"/>
+                        <outlet property="dragSquare" destination="x3O-pM-tRb" id="8sc-Oa-lde"/>
+                        <outlet property="dragTriangle" destination="oln-55-Mmv" id="fTM-xa-M7P"/>
+                        <outlet property="ogImageOutlet" destination="UQe-Ab-SKr" id="o9l-cU-p2G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Z2L-ZK-jy9">
+                    <connections>
+                        <action selector="viewControllerTapGestureRecognizer:" destination="BYZ-38-t0r" id="cC2-Hb-qZf"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="30U-rV-qpx">
+                    <connections>
+                        <action selector="dragTrianglePanGesture:" destination="BYZ-38-t0r" id="Z4n-aZ-Edr"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="4i9-z0-tL0">
+                    <connections>
+                        <action selector="dragSquarePanGesture:" destination="BYZ-38-t0r" id="vS5-LD-zgQ"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="ymb-P5-igA">
+                    <connections>
+                        <action selector="dragCirclePanGesture:" destination="BYZ-38-t0r" id="C6X-CL-4dp"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer id="qnJ-A0-64y">
+                    <connections>
+                        <action selector="clickSquare:" destination="BYZ-38-t0r" id="u4e-ni-Qq8"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="dem-mf-LAs">
+                    <connections>
+                        <action selector="clickTriangle:" destination="BYZ-38-t0r" id="qUk-GL-m8z"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="0EF-z1-sSi">
+                    <connections>
+                        <action selector="clickCircle:" destination="BYZ-38-t0r" id="ZMN-Lz-dWI"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="89.855072463768124" y="81.521739130434796"/>
+            <point key="canvasLocation" x="89.302325581395351" y="81.115879828326186"/>
         </scene>
     </scenes>
     <resources>
+        <image name="circle" catalog="system" width="128" height="123"/>
+        <image name="circle.fill" catalog="system" width="128" height="123"/>
+        <image name="figure.stand" catalog="system" width="74" height="128"/>
+        <image name="square" catalog="system" width="128" height="114"/>
+        <image name="square.fill" catalog="system" width="128" height="114"/>
+        <image name="triangle" catalog="system" width="128" height="109"/>
+        <image name="triangle.fill" catalog="system" width="128" height="109"/>
         <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

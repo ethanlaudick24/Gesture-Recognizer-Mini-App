@@ -9,59 +9,84 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var dragCircle: UIImageView!
+    @IBOutlet weak var dragSquare: UIImageView!
+    @IBOutlet weak var dragTriangle: UIImageView!
+    @IBOutlet weak var ogImageOutlet: UIImageView!
+    @IBOutlet weak var clickSquare: UIImageView!
+    @IBOutlet weak var clickCircle: UIImageView!
+    @IBOutlet weak var clickTriangle: UIImageView!
     
-    @IBOutlet weak var numberOne: UITextField!
-    
-    @IBOutlet weak var numberTwo: UITextField!
-    
-    @IBOutlet weak var outputText: UITextField!
-    
-    
-    
+    var currImageC = "circle"
+    var currImageS = "square"
+    var currImageT = "triangle"
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
     
-    @IBAction func addAction(_ sender: Any) {
-        let num1 = Double(numberOne.text!)!
-        let num2 = Double(numberTwo.text!)!
-        let sum = num1 + num2
-        outputText.text = "\(sum)"
+    @IBAction func viewControllerTapGestureRecognizer(_ sender: UITapGestureRecognizer) {
+        let loc = sender.location(in: view)
+        ogImageOutlet.center = loc
     }
     
-    @IBAction func subtractAction(_ sender: Any) {
-        let num1 = Double(numberOne.text!)!
-        let num2 = Double(numberTwo.text!)!
-        let difference = num1 - num2
-        outputText.text = "\(difference)"
+    @IBAction func dragTrianglePanGesture(_ sender: UIPanGestureRecognizer) {
+        let loc = sender.location(in: view)
+        dragTriangle.center = loc
+    }
+        
+    @IBAction func dragSquarePanGesture(_ sender: UIPanGestureRecognizer) {
+        let loc = sender.location(in: view)
+        dragSquare.center = loc
     }
     
-    @IBAction func multiplyAction(_ sender: Any) {
-        let num1 = Double(numberOne.text!)!
-        let num2 = Double(numberTwo.text!)!
-        let product = num1 * num2
-        outputText.text = "\(product)"
+    @IBAction func dragCirclePanGesture(_ sender: UIPanGestureRecognizer) {
+        let loc = sender.location(in: view)
+        dragCircle.center = loc
     }
     
-    @IBAction func divideAction(_ sender: Any) {
-        let num1 = Double(numberOne.text!)!
-        let num2 = Double(numberTwo.text!)!
-        let qoutient = num1 / num2
-        outputText.text = "\(qoutient)"
-    }
-
-    @IBAction func permOfRectAction(_ sender: Any) {
-        let num1 = Double(numberOne.text!)!
-        let num2 = Double(numberTwo.text!)!
-        let sum = (num1 * 2) + (num2 * 2)
-        outputText.text = "\(sum)"
+    @IBAction func clickSquare(_ sender: UITapGestureRecognizer) {
+        var x = pickRandomShape()
+        while currImageS == x {
+            x = pickRandomShape()
+        }
+        currImageS = x
+        clickSquare.image = UIImage(systemName: x)
     }
     
+    @IBAction func clickTriangle(_ sender: UITapGestureRecognizer) {
+        var x = pickRandomShape()
+        while currImageT == x {
+            x = pickRandomShape()
+        }
+        currImageT = x
+        clickTriangle.image = UIImage(systemName: x)
+    }
+    
+    @IBAction func clickCircle(_ sender: UITapGestureRecognizer) {
+        var x = pickRandomShape()
+        while currImageC == x {
+            x = pickRandomShape()
+        }
+        currImageC = x
+        clickCircle.image = UIImage(systemName: x)
+    }
     
     
-    
+    func pickRandomShape() -> String{
+        let x = Int.random(in: 1...3)
+        
+        switch x {
+        case 1:
+            return "circle"
+        case 2:
+            return "square"
+        case 3:
+            return "triangle"
+        default:
+            return "circle"
+        }
+    }
     
     
 }
